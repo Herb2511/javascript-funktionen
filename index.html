@@ -1,24 +1,35 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
 </head>
 
 
 <body>
     <p>Test</p>
+    <!-- Calculate input -->
     <input type="number" name="message" id="message" onkeyup="doMath()" maxlength="60">message
     <input type="text" name="total" id="total" maxlength="60">amount
 
-    <p id="demo"></p>
+    <p id="array-output"></p>
 
-
-
-    Passwort: <input type="password" value="FakePSW" id="myInput">
+    <!-- Show password checkbox -->
+    Passwort: <input type="password" value="Passwort" id="myInput">
     <br>
     <input type="checkbox" onclick="myFunction()">Passwort anzeigen
 
+    <!-- Validate form -->
+    <form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname" id="value">
+        <input type="submit" value="Submit"> 
+    </form>
 
+    <!-- Mark and show button when form is not filled -->
+    <p id="hinweis" style="color: red;"></p>
+    <button id="button1" style="display: none;" onclick="hideButton()">Ok</button>
 
+    <!-- Constructpr object -->
+    <p id="objekt"></p>
 
     <script src="test.js"></script>
 </body>
