@@ -78,3 +78,61 @@ var childage = year - 1985;
 document.getElementById("objekt").innerHTML = "Mein Kind, " + child + " ist " + childage + " Jahre alt.";
 
 console.log(child + " " + ", " + childage);
+
+// Countdown
+function Counter() {
+    // Counter einlesen
+    var obj = document.getElementById("counter").firstChild;
+    var zeit = obj.nodeValue;
+
+    // Counter abzählen
+    var zsplit = zeit.split(":");
+    var stunde = zsplit[0];
+    var minute = zsplit[1];
+    var sekunde = zsplit[2];
+    if (sekunde > 0) {
+        sekunde--;
+    }
+    else {
+        minute--;
+        sekunde = "59";
+    }
+    if (minute >= 0) {
+        if (minute.length < 2) {
+            minute = "0" + minute;
+        }
+    }
+    else {
+        stunde--;
+        minute = 59;
+    }
+    if (stunde >= 0) {
+        if (stunde.length < 2) {
+            stunde = "0" + stunde;
+        }
+    }
+    zeit = stunde + ":" + minute + ":" + (sekunde < 10 ? "0" : "") + sekunde;
+
+    // Überprüfen ob der Counter auf "00:00:0" steht
+    if (stunde < "01" && minute < "01" && sekunde < "1") {
+        // Counter beenden
+        window.clearInterval(aktiv);
+        // Hier kann bsw. eine neue Funktion gestartet werden
+    }
+    // Counter ausgeben
+    var obj = document.getElementById("counter").firstChild;
+    obj.nodeValue = zeit;
+}
+
+
+// Counter starten
+var aktiv = window.setInterval("Counter()", 999);
+
+
+document.getElementById("pausebutton").onclick = function () {
+    alert("Countdown wurde pausiert!");
+};
+
+
+
+
