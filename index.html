@@ -1,43 +1,63 @@
 <html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-</head>
+    <body>
+        <p>Test</p>
+        <!-- Calculate input -->
+        <input type="number" name="message" id="message" onkeyup="doMath()" maxlength="60" />message
+        <input type="text" name="total" id="total" maxlength="60" />amount
 
+        <p id="array-output"></p>
 
-<body>
-    <p>Test</p>
-    <!-- Calculate input -->
-    <input type="number" name="message" id="message" onkeyup="doMath()" maxlength="60">message
-    <input type="text" name="total" id="total" maxlength="60">amount
+        <!-- Show password checkbox -->
+        Passwort: <input type="password" value="Passwort" id="myInput" />
+        <br />
+        <input type="checkbox" onclick="myFunction()" />Passwort anzeigen
 
-    <p id="array-output"></p>
+        <!-- Validate form -->
+        <form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
+            Name: <input type="text" name="fname" id="value" />
+            <input type="submit" value="Submit" />
+        </form>
 
-    <!-- Show password checkbox -->
-    Passwort: <input type="password" value="Passwort" id="myInput">
-    <br>
-    <input type="checkbox" onclick="myFunction()">Passwort anzeigen
+        <!-- Mark and show button when form is not filled -->
+        <p id="hinweis" style="color: red"></p>
+        <button id="button1" style="display: none" onclick="hideButton()">Ok</button>
 
-    <!-- Validate form -->
-    <form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
-        Name: <input type="text" name="fname" id="value">
-        <input type="submit" value="Submit">
-    </form>
+        <!-- Constructpr object -->
+        <p id="objekt" style="display: none"></p>
 
-    <!-- Mark and show button when form is not filled -->
-    <p id="hinweis" style="color: red;"></p>
-    <button id="button1" style="display: none;" onclick="hideButton()">Ok</button>
+        <!-- Countdown -->
+        <span id="counter">01:00:00</span>
+        <button id="pausebutton" onclick="clearInterval(aktiv)">Pause</button>
+        <button id="resetbutton">Neustarten</button>
 
-    <!-- Constructpr object -->
-    <p id="objekt" style="display: none;"></p>
+        <!-- Den Wert einer Variable ändern -->
+        <h1>Elderflower</h1>
+        <div id="content">
+            <div class="message">
+                Verfügbar:
+                <span id="stock"></span>
+            </div>
+            <div class="message">
+                Im Versand:
+                <span id="shipping"></span>
+            </div>
+        </div>
 
-    <!-- Countdown -->
-    <span id="counter">01:00:00</span>
-    <button id="pausebutton" onclick="clearInterval(aktiv)">Pause</button>
-    <button id="resetbutton">Neustarten</button>
+        <!-- Arrays ausgeben -->
+        <br />
+        <div>
+            <p>
+                <b>Farbe:</b>
+                <span id="colors"></span>
+            </p>
+        </div>
 
-
-    <script src="test.js"></script>
-</body>
-
+        <!-- JS Skripte einbinden -->
+        <script src="test.js"></script>
+        <script src="js-jquery.js"></script>
+    </body>
 </html>

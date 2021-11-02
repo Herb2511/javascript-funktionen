@@ -4,7 +4,7 @@ var n = d.getTime();
 console.log(d);
 
 // Set a valid end date from users timezone for the countdown.
-var deadline = 'October 22 2019 15:49:59 GMT+0200';
+var deadline = 'November 25 2021 00:00:01 GMT+0100';
 
 // Calculate the time remaining.
 function getTimeRemaining(endtime) {
