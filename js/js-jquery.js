@@ -18,15 +18,31 @@ elShip.className = shipping;
 var colors;
 colors = ['weiß', 'rot', 'schwarz', 'benutzer'];
 var el = document.getElementById('colors');
-el.textContent = colors[3];
+el.textContent = colors[1];
 
 // Arrays Konstruktor "new Array"
-var colors = new Array('weiß', 'rot', 'schwarz', 'benutzer');
+var colors2 = new Array('weiß', 'rot', 'schwarz', 'benutzer');
 var el = document.getElementById('colors');
-el.innerHTML = colors.item(0);
+// el.innerHTML = colors2.item(0);
 
 // Werte in Arrays
 var numColors;
 numColors = colors.length;
 
-console.log(numColors);
+// Arithmetische Operatoren, Num, Strings, Bools
+var subtotal = (13 + 1) * 5; // Zwischensumme 70
+var shipping = 0.5 * (13 + 1); // Lieferkosten 7
+
+var total = subtotal + shipping; // Summe 77
+
+var elSub = document.getElementById('subtotal');
+elSub.textContent = subtotal;
+
+var elShip = document.getElementById('shipping');
+elShip.textContent = shipping;
+
+var elTotal = document.getElementById('total');
+elTotal.textContent = total;
+
+console.log(shipping);
+

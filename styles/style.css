@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-    color: #00BF96;
+    color: #00bf96;
     font-weight: 100;
     font-size: 40px;
     margin: 40px 0px 20px;
@@ -21,17 +21,17 @@ h1 {
     font-size: 30px;
 }
 
-#clockdiv>div {
+#clockdiv > div {
     padding: 10px;
     border-radius: 3px;
-    background: #00BF96;
+    background: #00bf96;
     display: inline-block;
 }
 
-#clockdiv div>span {
+#clockdiv div > span {
     padding: 15px;
     border-radius: 3px;
-    background: #00816A;
+    background: #00816a;
     display: inline-block;
 }
 
@@ -41,5 +41,5 @@ h1 {
 }
 
 .headline {
-    color: #00816A;
+    color: #00816a;
 }

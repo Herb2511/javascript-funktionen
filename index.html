@@ -1,6 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="de">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript Grundfunktionen</title>
+        <link rel="stylesheet" href="/styles/style.css" />
     </head>
 
     <body>
@@ -56,8 +61,30 @@
             </p>
         </div>
 
+        <!-- Arithmetische Operatoren -->
+        <br />
+        <div>
+            <p>
+                Zwischensumme:
+                <span id="subtotal"></span>
+                <br />
+                Versandkosten:
+                <span id="shipping"></span>
+                <br />
+                Gesamtsumme:
+                <span id="total"></span>
+            </p>
+        </div>
+
+        <!-- Funktionen -->
+        <h1>TravelWorthy</h1>
+        <div id="message-travel">Willkommen auf unserer Webseite!</div>
+        <br />
+        <button onclick="updateMessage()">Hier klicken!</button>
+
         <!-- JS Skripte einbinden -->
-        <script src="test.js"></script>
-        <script src="js-jquery.js"></script>
+        <script src="js/test.js"></script>
+        <script src="js/js-jquery.js"></script>
+        <script src="js/functions-methods-objects.js"></script>
     </body>
 </html>
